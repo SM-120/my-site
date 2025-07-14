@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Benedictus Market</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google Fonts for Modern Look -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --main-bg: #23272f;
+            --card-bg: #181c22;
+            --acc-bg: #2d3138;
+            --primary: #69c4ff;
+            --secondary: #ffe066;
+            --highlight: #2beab8;
+            --border: #363b45;
+            --text-main: #f5f6fa;
+            --text-soft: #b5bfd6;
+            --radius: 18px;
+            --shadow: 0 4px 24px #0006;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--main-bg);
+            font-family: 'Montserrat', Arial, sans-serif;
+            color: var(--text-main);
+            min-height: 100vh;
+        }
+        header {
+            padding: 2rem 1rem 1rem 1rem;
+            text-align: center;
+            background: linear-gradient(90deg, #69c4ff 0, #2beab8 100%);
+            color: #222;
+            font-weight: 800;
+            font-size: 2.1rem;
+            letter-spacing: 2px;
+            box-shadow: var(--shadow);
+        }
+        main {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem 2rem 1rem;
+        }
+        .category {
+            margin-bottom: 2.5rem;
+        }
+        .category-title {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: .7rem;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 12px #0004;
+        }
+        .item-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 1.2rem;
+        }
+        .item-card {
+            background: var(--card-bg);
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: 0 2px 8px #0003;
+            padding: 1.3rem 1rem 1rem 1.1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            transition: transform 0.13s, border-color 0.13s;
+        }
+        .item-card:hover {
+            border-color: var(--highlight);
+            transform: translateY(-3px) scale(1.03);
+        }
+        .item-name {
+            font-size: 1.14rem;
+            font-weight: 600;
+            margin-bottom: 0.3em;
+            color: var(--secondary);
+            letter-spacing: 0.5px;
+        }
+        .item-price {
+            font-size: 1.12rem;
+            font-weight: 800;
+            color: var(--highlight);
+        }
+        @media (max-width: 600px) {
+            header {
+                font-size: 1.2rem;
+                padding: 1.1rem 0.5rem;
+            }
+            main {
+                padding: 0 0.1rem 2rem 0.1rem;
+            }
+        }
+        /* Accent bar under category title */
+        .category-title::after {
+            content: '';
+            display: block;
+            width: 56px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--highlight));
+            border-radius: 2px;
+            margin-top: 7px;
+            margin-left: 2px;
+        }
+        footer {
+            text-align: center;
+            color: #b5bfd6;
+            font-size: .97em;
+            padding: 1.1rem 0 1.3rem 0;
+            background: var(--acc-bg);
+            border-top: 1px solid var(--border);
+            letter-spacing: 0.6px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Benedictus Market<br>
+        <span style="font-size:1rem; font-weight:600; letter-spacing:0.5px; color:#222; opacity:0.92">— Price List —</span>
+    </header>
+    <main>
+        <section class="category">
+            <div class="category-title">Logs</div>
+            <div class="item-list">
+                <div class="item-card"><div class="item-name">Oak Log</div><div class="item-price">3g</div></div>
+                <div class="item-card"><div class="item-name">Pine Log</div><div class="item-price">4g</div></div>
+                <div class="item-card"><div class="item-name">Birch Log</div><div class="item-price">4g</div></div>
+                <div class="item-card"><div class="item-name">Mapple Log</div><div class="item-price">4g</div></div>
+                <div class="item-card"><div class="item-name">Mandrove Log</div><div class="item-price">3g</div></div>
+            </div>
+        </section>
+        <section class="category">
+            <div class="category-title">Boards</div>
+            <div class="item-list">
+                <div class="item-card"><div class="item-name">Oak Boards</div><div class="item-price">6g</div></div>
+                <div class="item-card"><div class="item-name">Pine Boards</div><div class="item-price">6g</div></div>
+                <div class="item-card"><div class="item-name">Birch Boards</div><div class="item-price">7g</div></div>
+                <div class="item-card"><div class="item-name">Mapple Boards</div><div class="item-price">12g</div></div>
+                <div class="item-card"><div class="item-name">Mandrove Boards</div><div class="item-price">15g</div></div>
+            </div>
+        </section>
+        <section class="category">
+            <div class="category-title">Ores</div>
+            <div class="item-list">
+                <div class="item-card"><div class="item-name">Coal</div><div class="item-price">3g</div></div>
+                <div class="item-card"><div class="item-name">Tin Ore</div><div class="item-price">3g</div></div>
+                <div class="item-card"><div class="item-name">Copper Ore</div><div class="item-price">3g</div></div>
+                <div class="item-card"><div class="item-name">Iron Ore</div><div class="item-price">4g</div></div>
+            </div>
+        </section>
+        <section class="category">
+            <div class="category-title">Bars</div>
+            <div class="item-list">
+                <div class="item-card"><div class="item-name">Tin Bar</div><div class="item-price">6g</div></div>
+                <div class="item-card"><div class="item-name">Copper Bar</div><div class="item-price">6g</div></div>
+                <div class="item-card"><div class="item-name">Iron Bar</div><div class="item-price">6g</div></div>
+                <div class="item-card"><div class="item-name">Steel Bar</div><div class="item-price">9g</div></div>
+                <div class="item-card"><div class="item-name">Tungsten Bar</div><div class="item-price">10g</div></div>
+                <div class="item-card"><div class="item-name">Platinum Bar</div><div class="item-price">20g</div></div>
+            </div>
+        </section>
+        <section class="category">
+            <div class="category-title">Monster Parts</div>
+            <div class="item-list">
+                <div class="item-card"><div class="item-name">Rodent Pelt</div><div class="item-price">3g</div></div>
+                <div class="item-card"><div class="item-name">Small Game Meat</div><div class="item-price">1.8g</div></div>
+                <div class="item-card"><div class="item-name">Soft Hide</div><div class="item-price">4g</div></div>
+                <div class="item-card"><div class="item-name">Medium Hide</div><div class="item-price">5g</div></div>
+                <div class="item-card"><div class="item-name">Boar Tusk</div><div class="item-price">4g</div></div>
+                <div class="item-card"><div class="item-name">Feather</div><div class="item-price">7g</div></div>
+                <div class="item-card"><div class="item-name">Bone</div><div class="item-price">4g</div></div>
+                <div class="item-card"><div class="item-name">Stag Rack</div><div class="item-price">15g</div></div>
+            </div>
+        </section>
+        <section class="category">
+            <div class="category-title">Leather</div>
+            <div class="item-list">
+                <div class="item-card"><div class="item-name">Flimsy Leather</div><div class="item-price">6g</div></div>
+                <div class="item-card"><div class="item-name">Plush Leather</div><div class="item-price">8g</div></div>
+                <div class="item-card"><div class="item-name">Fragile Leather</div><div class="item-price">10g</div></div>
+                <div class="item-card"><div class="item-name">Delicate Leather</div><div class="item-price">15g</div></div>
+                <div class="item-card"><div class="item-name">Graceful Leather</div><div class="item-price">14g</div></div>
+            </div>
+        </section>
+        <section class="category">
+            <div class="category-title">Cotton</div>
+            <div class="item-list">
+                <div class="item-card"><div class="item-name">Light Cotton Fabric</div><div class="item-price">8g</div></div>
+                <div class="item-card"><div class="item-name">Thread</div><div class="item-price">20g</div></div>
+                <div class="item-card"><div class="item-name">Heavy Cotton Fabric</div><div class="item-price">18g</div></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        &copy; 2025 Benedictus Market &mdash; Design moderne et responsive.<br>
+        Tous droits réservés.
+    </footer>
+</body>
+</html>
